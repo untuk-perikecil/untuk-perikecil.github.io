@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesan Dari langit &#10084;</title>
+    <title>Pesan Dari Langit &#10084;</title>
     <style>
         body {
             background-color: #ffe6e6; /* Warna pink soft */
@@ -42,13 +42,15 @@
         .gif-container img {
             width: 100%;
             border-radius: 10px;
+            /* Tambahan agar gambar tidak gepeng */
+            object-fit: cover; 
+            height: 200px; 
         }
         .btn-group {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            position: relative;
-            height: 50px; /* Space for buttons */
+            gap: 20px; /* Jarak antar tombol */
+            margin-top: 20px;
         }
         button {
             padding: 10px 25px;
@@ -58,6 +60,8 @@
             cursor: pointer;
             transition: transform 0.2s;
             font-weight: bold;
+            /* Pastikan tombol tidak tumpang tindih */
+            position: relative; 
         }
         #btnMau {
             background-color: #ff6b6b;
@@ -67,8 +71,6 @@
         #btnGak {
             background-color: #e0e0e0;
             color: #555;
-            position: absolute; /* Penting biar bisa lari */
-            right: 20px; /* Posisi awal */
         }
     </style>
 </head>
@@ -76,7 +78,7 @@
 
     <div class="container">
         <div class="gif-container">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnV4eWw0Zm04eW54N3B4eW54N3B4eW54N3B4eW54N3B4eW54N3B4eW54N3B4eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/L3c8a8FPMCZkQ/giphy.gif" alt="Cute Dino">
+            <img src="1000428456.jpg" alt="Dino Kakak">
         </div>
 
         <h1>Laporan Bulanan 🦖</h1>
@@ -101,20 +103,18 @@
             var x = Math.random() * (window.innerWidth - 100);
             var y = Math.random() * (window.innerHeight - 50);
             
-            // Atur posisi baru (fixed biar bisa lari keluar container kalau perlu, atau absolute dalam container)
+            // Ubah posisi jadi fixed agar bisa lari kemana aja
             btn.style.position = "fixed"; 
             btn.style.left = x + "px";
             btn.style.top = y + "px";
         }
 
         function terima() {
-            // GANTI NOMOR DI BAWAH INI DENGAN NOMOR WA KAKAK
-            // Format: 628xxxx (tanpa + atau 0 di depan)
+            // GANTI NOMOR WA DI SINI
             var nomorWA = "6282295929081"; 
             
-            var pesan = "Halo Kak Dino! Selamat 1 bulan ya, ini nomor aku ✨";
+            var pesan = "Halo Kak Isat! ini nomor aku atul ya ✨";
             
-            // Redirect ke WA
             window.location.href = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
         }
     </script>
